@@ -1,0 +1,21 @@
+*********FRONT*********
+//Instal VUE
+yarn global add @vue/cli //It did not work
+npm i -g @vue/cli
+
+//Create project
+//SASS/SCSS with dart
+//ESLint + prettier
+//History mode
+vue create portfolio-front
+
+//postcss-import
+yarn add postcss-import
+
+//Tailwindcss
+yarn add -D tailwindcss@latest
+npx tailwindcss init
+
+//Due to Error: PostCSS plugin tailwindcss requires PostCSS 8.
+yarn remove tailwindcss
+yarn add tailwindcss@npm:@tailwindcss/postcss7-compat
