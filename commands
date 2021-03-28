@@ -19,3 +19,17 @@ npx tailwindcss init
 //Due to Error: PostCSS plugin tailwindcss requires PostCSS 8.
 yarn remove tailwindcss
 yarn add tailwindcss@npm:@tailwindcss/postcss7-compat
+
+
+**************GIT************************
+git init
+
+git remote add origin https://github.com/adolfredo-coneo/portfolio-vue-front.git
+
+git add .
+
+git commit -m "initializing repository"
+
+git branch -M main
+
+git push -u origin main

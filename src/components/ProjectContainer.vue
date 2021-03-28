@@ -20,25 +20,17 @@
         >
           <article class="text-gray-600 leading-6">
             <h2
-              class="transition-opacity duration-1500 delay-500 text-xl sm:text-2xl font-semibold text-black px-4 py-6 sm:px-6 pb-1 opacity-25"
+              class="text-xl sm:text-2xl font-semibold text-black px-4 py-6 sm:px-6 pb-1"
             >
-              Weekly one-on-one
+              Reado Kids
             </h2>
             <dl
-              class="transition-opacity duration-1500 delay-500 flex flex-wrap divide-y divide-gray-200 border-b border-gray-200 opacity-25"
+              class="flex flex-wrap divide-y divide-gray-200 border-b border-gray-200"
             >
               <div class="px-4 sm:px-6 pb-6">
-                <dt class="sr-only">Date and time</dt>
+                <dt class="sr-only">Date</dt>
                 <dd class="text-sm sm:text-base">
-                  <time datetime="2020-11-15T10:00:00-05:00"
-                    >Thu Nov 15, 2020 10:00am</time
-                  >
-                  -<!-- -->
-                  <time datetime="2020-11-15T11:00:00-05:00"
-                    >11:00am<span class="sr-only sm:not-sr-only">
-                      EST</span
-                    ></time
-                  >
+                  <time date="2020-10-01">October, 2020</time>
                 </dd>
               </div>
               <div
@@ -47,11 +39,9 @@
                 <dt
                   class="w-2/5 sm:w-1/3 flex-none uppercase text-xs sm:text-sm font-semibold tracking-wide"
                 >
-                  Location
+                  Type
                 </dt>
-                <dd class="text-black text-sm sm:text-base">
-                  Kitchener, <abbr title="Ontario">ON</abbr>
-                </dd>
+                <dd class="text-black text-sm sm:text-base">Front-End</dd>
               </div>
               <div
                 class="w-full flex-none flex items-baseline px-4 sm:px-6 py-4"
@@ -62,43 +52,29 @@
                   Description
                 </dt>
                 <dd class="italic text-sm sm:text-base">
-                  No meeting description
+                  Reado Kids description
                 </dd>
               </div>
               <div class="w-full flex-none flex items-center px-4 sm:px-6 py-4">
                 <dt
                   class="w-2/5 sm:w-1/3 flex-none uppercase text-xs sm:text-sm font-semibold tracking-wide"
                 >
-                  Attendees
+                  Stack
                 </dt>
                 <dd
                   class="text-sm sm:text-base font-medium text-gray-700 bg-gray-100 rounded-full py-1 pl-2 pr-4 flex items-center"
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    class="hidden sm:block text-gray-500 mr-2"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    ></path></svg
-                  >Andrew Parsons
+                  ReactJs, Javascript, TailwindCSS, Apollo Client, Netlify
                 </dd>
               </div>
             </dl>
-            <div class="grid grid-cols-2 gap-x-4 sm:gap-x-6 px-4 sm:px-6 py-4">
+            <div class="grid grid-cols-1 px-4 sm:px-6 py-4">
               <div
                 class="text-base font-medium rounded-lg bg-gray-100 text-black py-3 text-center cursor-pointer"
               >
-                Decline
-              </div>
-              <div
-                class="text-base font-medium rounded-lg bg-rose-500 text-white py-3 text-center cursor-pointer"
-              >
-                Accept
+                <a href="https://readokids.app/" target="_blank"
+                  >Visit Website</a
+                >
               </div>
             </div>
           </article>
@@ -134,11 +110,20 @@
                 <h3
                   class="border border-transparent py-2 px-4 font-medium bg-white bg-opacity-10"
                 >
-                  styles.css
+                  reado-kids.png
                 </h3>
               </div>
               <div class="flex-none">
-                <div class="w-full flex-auto flex min-h-0 overflow-auto"></div>
+                <div class="w-full flex-auto flex min-h-0 overflow-auto">
+                  <div class="w-full relative flex-auto">
+                    <pre class="flex min-h-full text-xs md:text-sm">
+                      <div aria-hidden="true" class="hidden md:block text-white text-opacity-50 flex-none py-4 pr-4 text-right select-none" style="width:50px"></div>
+                      <code class="w-full flex justify-center overflow-auto">
+                        <img class="" alt="Reado-kids" src="@/assets/reado2.png" />
+                      </code>
+                    </pre>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -163,5 +148,10 @@ export default defineComponent({
 
 .grid {
   display: grid;
+}
+
+.ComponentDriven_atApplyCodeWindow__3MpJZ {
+  height: auto;
+  max-height: none;
 }
 </style>
