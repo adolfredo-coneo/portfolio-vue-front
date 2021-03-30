@@ -10,7 +10,7 @@ npm i -g @vue/cli
 vue create portfolio-front
 
 //postcss-import
-yarn add postcss-import
+yarn add postcss-imports
 
 //Tailwindcss
 yarn add -D tailwindcss@latest
@@ -19,6 +19,9 @@ npx tailwindcss init
 //Due to Error: PostCSS plugin tailwindcss requires PostCSS 8.
 yarn remove tailwindcss
 yarn add tailwindcss@npm:@tailwindcss/postcss7-compat
+
+//Axios
+yarn add axios
 
 
 **************GIT************************

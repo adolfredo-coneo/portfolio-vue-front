@@ -13,6 +13,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import ProjectService from "@/services/ProjectService";
 import ProjectCard from "@/components/ProjectCard.vue"; // @ is an alias to /src
 
 export default defineComponent({
@@ -22,40 +23,17 @@ export default defineComponent({
   },
   data() {
     return {
-      projects: [
-        {
-          id: 1,
-          category: "Front-End",
-          title: "Reado Kids",
-          description:
-            "Web App designed to teach kids how to read in Spanish in a fun and entertaining way.",
-          date: "October, 2020",
-          stack: ["ReactJs", "Javascript", "TailwindCSS", "Apollo Client"],
-          hosted: "Netlify",
-          link: "https://readokids.app/",
-          image: "",
-          status: true,
-        },
-        {
-          id: 2,
-          category: "Back-End",
-          title: "GraphQL API for Reado Kids",
-          description: "Back-End Reado Kids Description",
-          date: "November, 2020",
-          stack: [
-            "NodeJS",
-            "Typescript",
-            "Express",
-            "GraphQL",
-            "PostgreSQL on AWS",
-          ],
-          hosted: "Heroku",
-          link: "",
-          image: "",
-          status: true,
-        },
-      ],
+      projects: null,
     };
+  },
+  created() {
+    ProjectService.getEvents()
+      .then((response) => {
+        this.projects = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 });
 </script>
