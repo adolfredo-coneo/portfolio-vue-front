@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 const apiClient = axios.create({
   baseURL:
@@ -11,7 +11,10 @@ const apiClient = axios.create({
 });
 
 export default {
-  getEvents() {
+  getProjects(): Promise<AxiosResponse> {
     return apiClient.get("/projects");
+  },
+  getProject(id: string): Promise<AxiosResponse> {
+    return apiClient.get("/projects/" + id);
   },
 };

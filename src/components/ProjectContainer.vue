@@ -15,6 +15,7 @@
 import { defineComponent } from "vue";
 import ProjectService from "@/services/ProjectService";
 import ProjectCard from "@/components/ProjectCard.vue"; // @ is an alias to /src
+import { AxiosResponse } from "node_modules/axios";
 
 export default defineComponent({
   name: "ProjectContainer",
@@ -27,11 +28,11 @@ export default defineComponent({
     };
   },
   created() {
-    ProjectService.getEvents()
-      .then((response) => {
+    ProjectService.getProjects()
+      .then((response: AxiosResponse) => {
         this.projects = response.data;
       })
-      .catch((error) => {
+      .catch((error: void) => {
         console.log(error);
       });
   },

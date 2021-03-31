@@ -74,13 +74,18 @@
                 </dd>
               </div>
             </dl>
-            <div class="grid grid-cols-1 px-4 sm:px-6 py-4">
+            <div class="grid grid-cols-2 px-4 sm:px-6 py-4">
               <div
                 class="text-xl font-bold rounded-lg bg-gray-400 text-black py-2 text-center cursor-pointer"
               >
                 <a href="https://readokids.app/" target="_blank"
                   >Visit Website</a
                 >
+              </div>
+              <div
+                class="text-xl font-bold rounded-lg bg-gray-400 text-black py-2 text-center cursor-pointer"
+              >
+                <router-link to="/project/1">View Details</router-link>
               </div>
             </div>
           </article>
