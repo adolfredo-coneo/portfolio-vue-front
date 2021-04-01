@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="project">
     <h1>{{ project.title }}</h1>
     <p>{{ project.description }}</p>
   </div>
@@ -11,10 +11,10 @@ import { AxiosResponse } from "node_modules/axios";
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  props: ["id"],
   data() {
     return {
       project: null,
-      id: "1",
     };
   },
   created() {

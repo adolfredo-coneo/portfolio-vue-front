@@ -12,11 +12,11 @@
         <span class="text-yellow-400">&nbsp;}</span>
       </div>
       <div class="flex text-red-500 text-xl font-semibold">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/projects">Projects</router-link>
-        <router-link to="/blog">Blog</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <router-link :to="{ name: 'Home' }">Home</router-link>
+        <router-link :to="{ name: 'About' }">About</router-link>
+        <router-link :to="{ name: 'Projects' }">Projects</router-link>
+        <router-link :to="{ name: 'Blog' }">Blog</router-link>
+        <router-link :to="{ name: 'Contact' }">Contact</router-link>
       </div>
     </div>
   </nav>
