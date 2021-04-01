@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
+import NotFound from "../views/NotFound.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -40,6 +41,11 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ProjectDetails.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 

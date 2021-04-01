@@ -10,9 +10,7 @@
           class="w-full flex-none -ml-full rounded-3xl transform shadow-lg bg-gradient-to-br from-yellow-300 to-pink-600 rotate-1"
         ></div>
       </div>
-      <div
-        class="lg:col-start-2 lg:col-end-3 relative col-start-2 col-end-3 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-8 sm:px-6 md:px-8 pt-6 md:pt-8 lg:px-0 lg:pt-0"
-      >
+      <div :class="[classProject]">
         <div
           class="relative z-10 bg-white rounded-tr-xl sm:rounded-t-xl lg:rounded-xl shadow-lg lg:-mr-8 xl:mr-4"
         >
@@ -58,19 +56,9 @@
                 <dd
                   class="text-sm sm:text-base font-medium text-gray-700 bg-gray-100 rounded-2xl py-1 pl-2 pr-4 flex flex-wrap justify-center items-center"
                 >
-                  <img class="mr-1" alt="react" src="@/assets/react.png" />
-                  <img
-                    class="mr-1"
-                    alt="javascript"
-                    src="@/assets/javascript.png"
-                  />
-                  <img
-                    class="mr-1"
-                    alt="tailwind"
-                    src="@/assets/tailwind.png"
-                  />
-                  <img class="mr-1" alt="apollo" src="@/assets/apollo.png" />
-                  <img class="mr-1" alt="netlify" src="@/assets/netlify.png" />
+                  <div v-for="stack in project.stack" :key="stack.id">
+                    <img class="mr-1" :alt="stack.name" :src="stack.src" />
+                  </div>
                 </dd>
               </div>
             </dl>
@@ -94,9 +82,7 @@
           </article>
         </div>
       </div>
-      <div
-        class="relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-3 lg:col-end-4 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0"
-      >
+      <div :class="[classProject2]">
         <div
           class="relative overflow-hidden md:rounded-xl shadow-2xl flex CodeWindow_root__1fMBP ComponentDriven_atApplyCodeWindow__3MpJZ bg-pink-600"
         >
@@ -156,15 +142,20 @@ export default defineComponent({
     project: Object,
   },
   data() {
-    return {};
+    return {
+      classProject:
+        "lg:col-start-2 lg:col-end-3 relative col-start-2 col-end-3 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-8 sm:px-6 md:px-8 pt-6 md:pt-8 lg:px-0 lg:pt-0",
+      classProject2:
+        "relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-3 lg:col-end-4 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0",
+    };
   },
-  computed: {
-    users() {
-      if (this.project?.id % 2) {
-        return "lg:col-start-2 lg:col-end-3 relative col-start-2 col-end-3 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-8 sm:px-6 md:px-8 pt-6 md:pt-8 lg:px-0 lg:pt-0";
-      }
-      return "lg:col-start-3 lg:col-end-4 relative col-start-2 col-end-3 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-8 sm:px-6 md:px-8 pt-6 md:pt-8 lg:px-0 lg:pt-0";
-    },
+  created() {
+    if (!(this.project?.id % 2)) {
+      this.classProject =
+        "lg:col-start-3 lg:col-end-4 relative col-start-2 col-end-3 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-8 sm:px-6 md:px-8 pt-6 md:pt-8 lg:px-0 lg:pt-0";
+      this.classProject2 =
+        "relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-2 lg:col-end-3 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0";
+    }
   },
 });
 </script>

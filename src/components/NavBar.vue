@@ -7,11 +7,13 @@
       className="max-w-7xl flex justify-between border-b-2 border-blue-400 items-center mx-auto px-4 sm:px-0"
     >
       <div class="flex items-center justify-center h-12 font-black text-3xl">
-        <span class="text-yellow-400">{&nbsp;</span>
-        <span class="text-red-500">adolConeo</span>
-        <span class="text-yellow-400">&nbsp;}</span>
+        <router-link :to="{ name: 'Home' }">
+          <span class="text-yellow-400">{&nbsp;</span>
+          <span class="text-red-500">adolConeo</span>
+          <span class="text-yellow-400">&nbsp;}</span>
+        </router-link>
       </div>
-      <div class="flex text-red-500 text-xl font-semibold">
+      <div class="flex text-red-500 gap-6 text-xl font-semibold">
         <router-link :to="{ name: 'Home' }">Home</router-link>
         <router-link :to="{ name: 'About' }">About</router-link>
         <router-link :to="{ name: 'Projects' }">Projects</router-link>
@@ -65,9 +67,5 @@ nav {
 nav.scrolled {
   @apply shadow-2xl;
   border-bottom: 0px;
-}
-
-nav a {
-  @apply ml-6;
 }
 </style>

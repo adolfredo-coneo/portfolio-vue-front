@@ -6,7 +6,33 @@
       "title": "Reado Kids",
       "description": "Web App designed to teach kids how to read in Spanish in a fun and entertaining way.",
       "date": "October, 2020",
-      "stack": ["ReactJs", "Javascript", "TailwindCSS", "Apollo Client"],
+      "stack": [
+        {
+          "id": "1",
+          "name": "ReactJS",
+          "src": "assets/react.png"
+        },
+        {
+          "id": "2",
+          "name": "Javascript",
+          "src": "assets/javascript.png"
+        },
+        {
+          "id": "3",
+          "name": "TailwindCSS",
+          "src": "assets/tailwind.png"
+        },
+        {
+          "id": "4",
+          "name": "Apollo",
+          "src": "assets/apollo.png"
+        },
+        {
+          "id": "5",
+          "name": "Netlify",
+          "src": "assets/netlify.png"
+        }
+      ],
       "hosted": "Netlify",
       "link": "https://readokids.app/",
       "image": "",
@@ -19,11 +45,41 @@
       "description": "Back-End Reado Kids Description",
       "date": "November, 2020",
       "stack": [
-        "NodeJS",
-        "Typescript",
-        "Express",
-        "GraphQL",
-        "PostgreSQL on AWS"
+        {
+          "id": "6",
+          "name": "NodeJS",
+          "src": "NodeJS"
+        },
+        {
+          "id": "7",
+          "name": "Typescript",
+          "src": "Typescript"
+        },
+        {
+          "id": "8",
+          "name": "Express",
+          "src": "Express"
+        },
+        {
+          "id": "9",
+          "name": "GraphQL",
+          "src": "GraphQL"
+        },
+        {
+          "id": "10",
+          "name": "PostgreSQL",
+          "src": "PostgreSQL"
+        },
+        {
+          "id": "11",
+          "name": "AWS",
+          "src": "AWS"
+        },
+        {
+          "id": "12",
+          "name": "Heroku",
+          "src": "Heroku"
+        }
       ],
       "hosted": "Heroku",
       "link": "",
