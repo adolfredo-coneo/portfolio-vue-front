@@ -1,7 +1,7 @@
 <template>
   <nav
     :class="{ scrolled: !view.atTopOfPage }"
-    class="fixed w-full p-8 m-auto top-0 animate"
+    class="fixed w-full pt-6 m-auto top-0 animate"
   >
     <div
       className="max-w-7xl flex justify-between border-b-2 border-blue-400 items-center mx-auto px-4 sm:px-0"
@@ -67,5 +67,7 @@ nav {
 nav.scrolled {
   @apply shadow-2xl;
   border-bottom: 0px;
+  @apply bg-black;
+  @apply bg-opacity-80;
 }
 </style>

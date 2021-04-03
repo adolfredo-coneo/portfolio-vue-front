@@ -35,7 +35,7 @@
       ],
       "hosted": "Netlify",
       "link": "https://readokids.app/",
-      "image": "",
+      "image": "assets/reado2.png",
       "status": true
     },
     {
@@ -48,42 +48,42 @@
         {
           "id": "6",
           "name": "NodeJS",
-          "src": "NodeJS"
+          "src": "assets/nodejs.png"
         },
         {
           "id": "7",
           "name": "Typescript",
-          "src": "Typescript"
+          "src": "assets/typescript.png"
         },
         {
           "id": "8",
           "name": "Express",
-          "src": "Express"
+          "src": "assets/express.png"
         },
         {
           "id": "9",
           "name": "GraphQL",
-          "src": "GraphQL"
+          "src": "assets/graphql.png"
         },
         {
           "id": "10",
           "name": "PostgreSQL",
-          "src": "PostgreSQL"
+          "src": "assets/postgresql.png"
         },
         {
           "id": "11",
           "name": "AWS",
-          "src": "AWS"
+          "src": "assets/aws.png"
         },
         {
           "id": "12",
           "name": "Heroku",
-          "src": "Heroku"
+          "src": "assets/heroku.png"
         }
       ],
       "hosted": "Heroku",
       "link": "",
-      "image": "",
+      "image": "assets/reado_backend.png",
       "status": true
     }
   ]

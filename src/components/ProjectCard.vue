@@ -12,7 +12,7 @@
       </div>
       <div :class="[classProject]">
         <div
-          class="relative z-10 bg-white rounded-tr-xl sm:rounded-t-xl lg:rounded-xl shadow-lg lg:-mr-8 xl:mr-4"
+          class="relative z-0 bg-white rounded-tr-xl sm:rounded-t-xl lg:rounded-xl shadow-lg lg:-mr-8 xl:mr-4"
         >
           <article class="text-gray-600 leading-6">
             <h2
@@ -119,7 +119,7 @@
                     <pre class="flex min-h-full text-xs md:text-sm">
                       <div aria-hidden="true" class="hidden md:block text-white text-opacity-50 flex-none py-4 pr-4 text-right select-none" style="width:50px"></div>
                       <code class="w-full flex justify-center overflow-auto">
-                        <img class="" alt="Reado-kids" src="@/assets/reado2.png" />
+                        <img class="" :alt="project.title" :src="project.image" />
                       </code>
                     </pre>
                   </div>
