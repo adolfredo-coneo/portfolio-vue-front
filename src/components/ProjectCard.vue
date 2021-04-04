@@ -3,7 +3,7 @@
     <!-- Display Project Data -->
     <div class="grid GradientLockup_root__sBkgs mb-20">
       <div
-        class="col-start-2 col-end-3 lg:col-start-1 lg:col-end-5 row-start-2 row-end-4 lg:row-end-5 lg:py-10 xl:py-16 flex -ml-8 pr-4 sm:ml-0 sm:pr-0"
+        class="col-start-2 lg:col-start-1 col-end-5 row-start-2 row-end-4 lg:row-end-5 lg:py-10 xl:py-16 flex -ml-8 pr-4 sm:ml-0 sm:pr-0"
       >
         <!--<div class="bg-gray-100 w-full flex-none rounded-3xl"></div>-->
         <div
@@ -12,7 +12,7 @@
       </div>
       <div :class="[classProject]">
         <div
-          class="relative z-0 bg-white rounded-tr-xl sm:rounded-t-xl lg:rounded-xl shadow-lg lg:-mr-8 xl:mr-4"
+          class="relative z-0 bg-white rounded-tr-xl sm:rounded-t-xl lg:rounded-xl shadow-lg"
         >
           <article class="text-gray-600 leading-6">
             <h2
@@ -31,25 +31,25 @@
               </div>
               <div class="w-full flex-none flex items-baseline py-4">
                 <dt
-                  class="w-2/5 sm:w-1/3 flex-none uppercase text-xs sm:text-sm font-semibold tracking-wide"
+                  class="w-2/5 sm:w-1/3 flex-none uppercase text-sm sm:text-base font-semibold tracking-wide"
                 >
                   Type
                 </dt>
-                <dd class="text-black text-sm sm:text-base">
+                <dd class="text-black text-base sm:text-lg">
                   {{ project.category }}
                 </dd>
               </div>
               <div class="w-full flex-none flex items-baseline py-4">
                 <dt
-                  class="w-2/5 sm:w-1/3 flex-none uppercase text-xs sm:text-sm font-semibold tracking-wide"
+                  class="w-2/5 sm:w-1/3 flex-none uppercase text-sm sm:text-base font-semibold tracking-wide"
                 >
                   Date
                 </dt>
-                <dd class="italic text-sm sm:text-base">{{ project.date }}</dd>
+                <dd class="italic text-base sm:text-lg">{{ project.date }}</dd>
               </div>
               <div class="w-full flex-none flex items-center pr-2 py-4">
                 <dt
-                  class="w-2/5 sm:w-1/3 flex-none uppercase text-xs sm:text-sm font-semibold tracking-wide"
+                  class="w-2/5 sm:w-1/3 flex-none uppercase text-sm sm:text-base font-semibold tracking-wide"
                 >
                   Stack
                 </dt>
@@ -64,14 +64,14 @@
             </dl>
             <div class="grid grid-cols-2 gap-4 px-4 sm:px-6 py-4">
               <div
-                class="text-xl font-bold rounded-lg bg-blue-500 text-black py-2 text-center cursor-pointer"
+                class="text-base sm:text-xl font-bold rounded-lg bg-blue-500 text-black py-2 text-center cursor-pointer"
               >
                 <a href="https://readokids.app/" target="_blank"
                   >Visit Website</a
                 >
               </div>
               <div
-                class="text-xl font-bold rounded-lg bg-gray-400 text-black py-2 text-center cursor-pointer"
+                class="text-base sm:text-xl font-bold rounded-lg bg-gray-400 text-black py-2 text-center cursor-pointer"
               >
                 <router-link
                   :to="{ name: 'ProjectDetails', params: { id: project.id } }"
@@ -144,17 +144,17 @@ export default defineComponent({
   data() {
     return {
       classProject:
-        "lg:col-start-2 lg:col-end-3 relative col-start-2 col-end-3 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-8 sm:px-6 md:px-8 pt-6 md:pt-8 lg:px-0 lg:pt-0",
+        "col-start-1 lg:col-start-2 col-end-5 md:col-end-5 lg:col-end-3 relative row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-0 sm:px-6 md:px-8 lg:px-0 pt-6 md:pt-8 lg:pt-0",
       classProject2:
-        "relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-3 lg:col-end-4 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0",
+        "relative w-full lg:w-auto col-start-1 col-end-5 lg:col-end-4 md:px-8 lg:px-0 lg:col-start-3  row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0",
     };
   },
   created() {
     if (!(this.project?.id % 2)) {
       this.classProject =
-        "lg:col-start-3 lg:col-end-4 relative col-start-2 col-end-3 row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-8 sm:px-6 md:px-8 pt-6 md:pt-8 lg:px-0 lg:pt-0";
+        "col-start-1 lg:col-start-3 col-end-5 lg:col-end-4 relative row-start-2 row-end-3 lg:row-start-3 lg:row-end-4 self-center pr-0 sm:px-6 md:px-8 lg:px-0 pt-6 md:pt-8 lg:pt-0";
       this.classProject2 =
-        "relative w-full lg:w-auto col-start-1 col-end-4 md:px-8 lg:px-0 lg:col-start-2 lg:col-end-3 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0";
+        "relative w-full lg:w-auto col-start-1 col-end-5 lg:col-end-3 md:px-8 lg:px-0 lg:col-start-2 row-start-3 row-end-4 lg:row-start-2 lg:row-end-5 self-center pb-8 lg:pb-0";
     }
   },
 });
@@ -163,7 +163,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .project-card {
-  @apply mt-10;
+  @apply mt-6;
   @apply p-0;
 }
 .GradientLockup_root__sBkgs {

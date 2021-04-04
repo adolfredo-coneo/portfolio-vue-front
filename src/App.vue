@@ -1,19 +1,26 @@
 <template>
-  <div>
+  <header>
     <NavBar />
-    <h1 class="pt-28"></h1>
-    <router-view />
-  </div>
+  </header>
+  <main>
+    <h1 class="pt-24"></h1>
+    <div class="px-6">
+      <router-view />
+    </div>
+  </main>
+  <footer><Footer /></footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     NavBar,
+    Footer,
   },
 });
 </script>

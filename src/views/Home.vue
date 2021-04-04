@@ -1,5 +1,5 @@
 <template>
-  <div class="home items-center pt-6">
+  <div class="home items-center">
     <section id="header">
       <HomeHeader />
     </section>

@@ -4,7 +4,7 @@
     class="fixed w-full pt-6 m-auto top-0 animate"
   >
     <div
-      className="max-w-7xl flex justify-between items-center mx-auto px-4 sm:px-4 xl:border-b-2 xl:border-blue-400"
+      className="max-w-7xl flex justify-between items-center mx-auto px-6 xl:border-b-2 xl:border-blue-400"
     >
       <div
         class="flex items-center justify-center h-12 font-black text-2xl sm:text-3xl"
