@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-7xl mx-auto mb-10 flex flex-col sm:flex-row items-center">
-    <div class="w-1/2 text-left">
+    <div class="w-2/2 md:w-1/2 text-left">
       <h1 class="text-4xl mb-10">Adolfredo Coneo</h1>
       <h2 class="text-2xl mb-10 w-11/12">
         I'm a full-stack developer from Cartagena, Colombia, with over 10 years
@@ -13,7 +13,7 @@
         <router-link to="/projects">My Projects</router-link>
       </div>
     </div>
-    <div class="w-1/2 flex justify-center">
+    <div class="w-2/2 md:w-1/2 flex justify-center">
       <!--<img alt="Vue logo" src="../assets/logo.png" />-->
       <img
         class="rounded-full"
