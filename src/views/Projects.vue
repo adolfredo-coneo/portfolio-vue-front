@@ -1,18 +1,31 @@
 <template>
   <div class="pt-20">
-    <h1>This is the projects page</h1>
-    <ProjectContainer />
+    <section id="project-header">
+      <RegularPageHeader :title="title" :description="description" />
+    </section>
+    <section id="projects">
+      <ProjectContainer />
+    </section>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import ProjectContainer from "@/components/ProjectContainer.vue"; // @ is an alias to /src
+import RegularPageHeader from "@/components/RegularPageHeader.vue";
 
 export default defineComponent({
   name: "Projects",
   components: {
     ProjectContainer,
+    RegularPageHeader,
+  },
+  data() {
+    return {
+      title: "Recent Projects",
+      description:
+        "These are some of the recent Front-End and Back-End projects I've been working lately.",
+    };
   },
 });
 </script>

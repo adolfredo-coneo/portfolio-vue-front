@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto mb-10 flex flex-col sm:flex-row items-center">
     <div class="w-2/2 md:w-1/2 text-left order-last md:order-first">
-      <h1 class="text-4xl mb-10">Adolfredo Coneo</h1>
+      <h1 class="text-5xl mb-10">Adolfredo Coneo</h1>
       <h2 class="text-2xl mb-10 w-11/12">
         I'm a full-stack developer from Cartagena, Colombia, with over 10 years
         of experience in diverse companies, and with the ability to deliver
