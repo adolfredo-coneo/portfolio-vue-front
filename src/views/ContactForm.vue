@@ -23,6 +23,14 @@
                 id="email"
               />
             </div>
+            <div class="col-span-6 sm:col-span-3">
+              <BaseSelect
+                :options="categories"
+                v-model="contact.messageType"
+                label="Message Type"
+                id="messageType"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -33,11 +41,13 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import BaseInput from "@/components/forms/BaseInput.vue";
+import BaseSelect from "@/components/forms/BaseSelect.vue";
 
 export default defineComponent({
   name: "ContactForm",
   components: {
     BaseInput,
+    BaseSelect,
   },
   data() {
     return {
@@ -46,7 +56,9 @@ export default defineComponent({
         category: "",
         name: "",
         email: "",
+        messageType: "",
         message: "",
+        catering: "",
       },
     };
   },
