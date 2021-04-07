@@ -31,6 +31,13 @@
                 id="messageType"
               />
             </div>
+            <div class="col-span-6 sm:col-span-3">
+              <BaseRadioGroup
+                v-model="contact.pets"
+                name="pets"
+                :options="petOptions"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -42,12 +49,14 @@
 import { defineComponent } from "vue";
 import BaseInput from "@/components/forms/BaseInput.vue";
 import BaseSelect from "@/components/forms/BaseSelect.vue";
+import BaseRadioGroup from "@/components/forms/BaseRadioGroup.vue";
 
 export default defineComponent({
   name: "ContactForm",
   components: {
     BaseInput,
     BaseSelect,
+    BaseRadioGroup,
   },
   data() {
     return {
@@ -58,8 +67,12 @@ export default defineComponent({
         email: "",
         messageType: "",
         message: "",
-        catering: "",
+        pets: "",
       },
+      petOptions: [
+        { label: "Yes", value: 1 },
+        { label: "No", value: 0 },
+      ],
     };
   },
 });
