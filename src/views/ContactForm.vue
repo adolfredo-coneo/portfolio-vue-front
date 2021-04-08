@@ -32,10 +32,20 @@
               />
             </div>
             <div class="col-span-6 sm:col-span-3">
-              <BaseRadioGroup
-                v-model="contact.pets"
-                name="pets"
-                :options="petOptions"
+              <div class="col-span-6 sm:col-span-3">
+                <BaseInput
+                  v-model="contact.company"
+                  label="Company"
+                  type="company"
+                  id="company"
+                />
+              </div>
+            </div>
+            <div class="col-span-6">
+              <BaseTextArea
+                v-model="contact.email"
+                label="What can I do for you?"
+                id="message"
               />
             </div>
           </div>
@@ -49,14 +59,14 @@
 import { defineComponent } from "vue";
 import BaseInput from "@/components/forms/BaseInput.vue";
 import BaseSelect from "@/components/forms/BaseSelect.vue";
-import BaseRadioGroup from "@/components/forms/BaseRadioGroup.vue";
+import BaseTextArea from "@/components/forms/BaseTextArea.vue";
 
 export default defineComponent({
   name: "ContactForm",
   components: {
     BaseInput,
     BaseSelect,
-    BaseRadioGroup,
+    BaseTextArea,
   },
   data() {
     return {
@@ -67,12 +77,8 @@ export default defineComponent({
         email: "",
         messageType: "",
         message: "",
-        pets: "",
+        company: "",
       },
-      petOptions: [
-        { label: "Yes", value: 1 },
-        { label: "No", value: 0 },
-      ],
     };
   },
 });
