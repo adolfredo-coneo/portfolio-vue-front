@@ -66,9 +66,7 @@
               <div
                 class="text-base sm:text-xl font-bold rounded-lg bg-blue-500 text-black py-2 text-center cursor-pointer"
               >
-                <a href="https://readokids.app/" target="_blank"
-                  >Visit Website</a
-                >
+                <a :href="project.link" target="_blank">Visit Website</a>
               </div>
               <div
                 class="text-base sm:text-xl font-bold rounded-lg bg-gray-400 text-black py-2 text-center cursor-pointer"

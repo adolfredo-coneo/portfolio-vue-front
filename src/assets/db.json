@@ -86,5 +86,15 @@
       "image": "assets/reado_backend.png",
       "status": true
     }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Jamiroquai",
+      "email": "jamiroquai@gmail.com",
+      "messageType": "General Question",
+      "message": "This is only a test",
+      "company": "Gorillaz Inc"
+    }
   ]
 }

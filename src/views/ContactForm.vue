@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-7xl mx-auto flex flex-col">
+  <div class="max-w-7xl mx-auto mb-20 flex flex-col">
     <div class="w-full border-b-2 border-blue-200 text-left mb-10 shadow-lg">
       <h1 class="mb-2 text-2xl">CONTACT FORM</h1>
     </div>
-    <form>
-      <div class="shadow overflow-hidden sm:rounded-md">
-        <div class="px-4 py-5 bg-blue-400 sm:p-6">
+    <form @submit.prevent="sendForm">
+      <div class="max-w-5xl mx-auto shadow overflow-hidden sm:rounded-md">
+        <div class="px-4 py-5 bg-gray-500 sm:p-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
               <BaseInput
@@ -43,10 +43,18 @@
             </div>
             <div class="col-span-6">
               <BaseTextArea
-                v-model="contact.email"
+                v-model="contact.message"
                 label="What can I do for you?"
                 id="message"
               />
+            </div>
+            <div class="col-span-6">
+              <button
+                type="submit"
+                class="inline-flex justify-center py-2 px-10 border border-transparent shadow-sm text-2xl sm:text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Send Message
+              </button>
             </div>
           </div>
         </div>
@@ -72,7 +80,6 @@ export default defineComponent({
     return {
       categories: ["General Question", "New Project", "Job Offer"],
       contact: {
-        category: "",
         name: "",
         email: "",
         messageType: "",
@@ -80,6 +87,9 @@ export default defineComponent({
         company: "",
       },
     };
+  },
+  methods: {
+    //sendForm() {},
   },
 });
 </script>
