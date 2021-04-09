@@ -8,19 +8,21 @@
       <router-view />
     </div>
   </main>
-  <footer><Footer /></footer>
+  <footer><ContactFooter /> <Footer /></footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
+import ContactFooter from "./components/ContactFooter.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     NavBar,
     Footer,
+    ContactFooter,
   },
 });
 </script>

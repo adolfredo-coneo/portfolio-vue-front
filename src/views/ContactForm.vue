@@ -5,7 +5,7 @@
     </div>
     <form @submit.prevent="sendForm">
       <div class="max-w-5xl mx-auto shadow overflow-hidden sm:rounded-md">
-        <div class="px-4 py-5 bg-gray-500 sm:p-6">
+        <div class="px-4 py-5 bg-white sm:p-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
               <BaseInput
