@@ -10,11 +10,22 @@ const apiClient = axios.create({
   },
 });
 
+class ContactInput {
+  name!: string;
+  email!: string;
+  messageType!: string;
+  message!: string;
+  company!: string;
+}
+
 export default {
   getProjects(): Promise<AxiosResponse> {
     return apiClient.get("/projects");
   },
   getProject(id: string): Promise<AxiosResponse> {
     return apiClient.get("/projects/" + id);
+  },
+  sendContact(contact: ContactInput): Promise<AxiosResponse> {
+    return apiClient.post("/contacts/", contact);
   },
 };

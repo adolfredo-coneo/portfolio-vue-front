@@ -36,3 +36,67 @@ git commit -m "initializing repository"
 git branch -M main
 
 git push -u origin main
+
+
+
+
+
+
+**********************Accessibility******************
+
+**Appropriate types
+Here is a list of the available types for an input element:
+
+button
+checkbox
+color
+date
+datetime-local
+email
+file
+hidden
+image
+month
+number
+password
+radio
+range
+reset
+search
+submit
+tel
+text
+time
+url
+week
+
+**Use Fieldset and Legend
+
+In forms, usually we group our inputs logically. For example, you would usually code your form to first ask the user for their personal data like Name, Last Name, and Phone. Later on, another section may ask them for a shipping address.
+
+For accessible users, this information may not be as immediately available without having to tab through the whole form, this is where <fieldset> and <legend> come to play.
+
+
+
+**Do NOT rely on placeholders
+
+A popular design pattern that emerged a few years ago used the placeholder attribute of inputs to describe the type of content that the element was expecting. Sadly this is still sometimes used now-a-days instead of a proper label.
+Placeholders should only be used to describe the intended value, but not as a replacement for a descriptive label.
+
+**Labels
+
+<label>
+  Title
+  <input />
+</label>
+
+Use "for" in label
+
+**Accessible errors
+Have you ever filled out a form just to hit the submit button and nothing seemed to work? It was clearly not submitting, and there was no visible error anywhere, yet something was clearly wrong. This situation is not foreign to most Internet users, but imagine the exasperation when you require accessible tools and the form doesn’t easily tell you what’s wrong with your inputs.
+
+**Explicit input state
+Another thing we can quickly add to our input to make it even more accessible is the aria-invalid attribute. A mistake that I’ve seen many forms make is to try and rely on a red border around an invalid input. For obvious reasons, this is not accessible.
+
+**Don’t disable the submit button
+If a form is not valid, then it makes sense to set the disabled attribute to true on the submit button so that the user can’t submit the form, right? We can even style the button with a different color to convey that it won’t be clickable.

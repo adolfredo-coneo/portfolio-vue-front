@@ -12,6 +12,7 @@
                 v-model="contact.name"
                 label="Name"
                 type="text"
+                required
                 id="name"
               />
             </div>
@@ -20,6 +21,7 @@
                 v-model="contact.email"
                 label="Email"
                 type="email"
+                required
                 id="email"
               />
             </div>
@@ -36,7 +38,7 @@
                 <BaseInput
                   v-model="contact.company"
                   label="Company"
-                  type="company"
+                  type="text"
                   id="company"
                 />
               </div>
@@ -45,6 +47,7 @@
               <BaseTextArea
                 v-model="contact.message"
                 label="What can I do for you?"
+                required
                 id="message"
               />
             </div>
@@ -68,6 +71,8 @@ import { defineComponent } from "vue";
 import BaseInput from "@/components/forms/BaseInput.vue";
 import BaseSelect from "@/components/forms/BaseSelect.vue";
 import BaseTextArea from "@/components/forms/BaseTextArea.vue";
+import ProjectService from "@/services/ProjectService";
+import { AxiosResponse } from "node_modules/axios";
 
 export default defineComponent({
   name: "ContactForm",
@@ -89,7 +94,15 @@ export default defineComponent({
     };
   },
   methods: {
-    //sendForm() {},
+    sendForm() {
+      ProjectService.sendContact(this.contact)
+        .then((response: AxiosResponse) => {
+          console.log("Response", response);
+        })
+        .catch((error: void) => {
+          console.log("Error", error);
+        });
+    },
   },
 });
 </script>
