@@ -28,4 +28,10 @@ export default {
   sendContact(contact: ContactInput): Promise<AxiosResponse> {
     return apiClient.post("/contacts/", contact);
   },
+  getArticles(): Promise<AxiosResponse> {
+    return apiClient.get("/articles");
+  },
+  getArticle(id: string): Promise<AxiosResponse> {
+    return apiClient.get("/articles/" + id);
+  },
 };

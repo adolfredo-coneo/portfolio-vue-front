@@ -117,7 +117,7 @@
                     <pre class="flex min-h-full text-xs md:text-sm">
                       <div aria-hidden="true" class="hidden md:block text-white text-opacity-50 flex-none py-4 pr-4 text-right select-none" style="width:50px"></div>
                       <code class="w-full flex justify-center overflow-auto">
-                        <img class="" :alt="project.title" :src="project.image" />
+                        <img class="pr-4" :alt="project.title" :src="project.image" />
                       </code>
                     </pre>
                   </div>

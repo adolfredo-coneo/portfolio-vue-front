@@ -42,7 +42,7 @@
       "id": 2,
       "category": "Back-End",
       "title": "GraphQL API for Reado Kids",
-      "description": "Back-End Reado Kids Description",
+      "description": "GraphQL API services built using NodeJS, PostgreSQL and AWS.  It is used by the Reado Kids app.",
       "date": "November, 2020",
       "stack": [
         {
@@ -85,6 +85,34 @@
       "link": "",
       "image": "assets/reado_backend.png",
       "status": true
+    },
+    {
+      "id": 3,
+      "category": "Front-End",
+      "title": "Daniel Manotas Portfolio Page",
+      "description": "It is a firm that provides professional architectural design, interior and exterior design services.",
+      "date": "June, 2019",
+      "stack": [
+        {
+          "id": "13",
+          "name": "Wordpress",
+          "src": "assets/wordpress.png"
+        },
+        {
+          "id": "14",
+          "name": "PHP",
+          "src": "assets/php.png"
+        },
+        {
+          "id": "15",
+          "name": "MySQL",
+          "src": "assets/mysql.png"
+        }
+      ],
+      "hosted": "GoDaddy",
+      "link": "http://www.danielmanotas.com/",
+      "image": "assets/danielmanotas.png",
+      "status": true
     }
   ],
   "contacts": [
@@ -95,6 +123,40 @@
       "messageType": "General Question",
       "message": "This is only a test",
       "company": "Gorillaz Inc"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "6 Basic Concepts To Getting Started as a ReactJS Developer",
+      "description": "In recent years the explosion and demand for robust frameworks and libraries to work in the front-end side of applications have been enormous. Each year a new flavor comes out and tries to take the throne as the Front-end king. One of those libraries...",
+      "date": "Feb 28, 2021",
+      "time": "9 min read",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1614559725300/w5De1Rgz6.png?w=500&h=263&fit=crop&crop=entropy&auto=compress"
+    },
+    {
+      "id": 2,
+      "title": "8 Tech/Software Developments Trends to Keep an Eye on 2021",
+      "description": "2021 will be an exciting year for the tech and software development industry; as we are still amid a global pandemic, organizations and developers look into ways to innovate and optimize processes. Let's take a look at some of the trends that are mak...",
+      "date": "Jan 15, 2021",
+      "time": "13 min read",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1610825118422/hIU1FHJOM.png?w=500&h=263&fit=crop&crop=entropy&auto=compress"
+    },
+    {
+      "id": 3,
+      "title": "How to Create a GraphQL API with AWS Database in 10 Easy Steps",
+      "description": "GraphQL it's one of those technologies in the web development industry that is taking more relevance each day that goes by. It was released by Facebook in 2015 and has been well received by the community and gaining momentum with developers. Here are...",
+      "date": "Dec 27, 2020",
+      "time": "43 min read",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1609107206668/3sm6dE9Xn.png?w=500&h=263&fit=crop&crop=entropy&auto=compress"
+    },
+    {
+      "id": 4,
+      "title": "9 Tips To Start a Web Development Career in 2021",
+      "description": "If you are a student, a recently graduated professional, or someone who wishes to change careers in the tech world, then you might have heard about one of the tech areas getting hotter every day and becoming more popular as we speak. Web development ...",
+      "date": "Nov 29, 2020",
+      "time": "13 min read",
+      "image": "https://cdn.hashnode.com/res/hashnode/image/upload/v1606685326519/QWoOv7Q5X.jpeg?w=500&h=263&fit=crop&crop=entropy&auto=compress"
     }
   ]
 }

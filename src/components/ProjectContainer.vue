@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto flex flex-col">
-    <div class="w-full border-b-2 border-blue-200 text-left mb-10 shadow-lg">
-      <h1 class="mb-2 text-2xl">RECENT PROJECTS</h1>
+    <div class="w-full border-b-2 border-blue-200 text-left mb-10">
+      <h1 class="mb-2 text-2xl text-black font-semibold">RECENT PROJECTS</h1>
     </div>
     <ProjectCard
       v-for="project in projects"

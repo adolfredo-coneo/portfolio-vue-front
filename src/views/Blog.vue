@@ -3,18 +3,25 @@
     <section id="blog-header">
       <RegularPageHeader :title="title" :description="description" />
     </section>
-    <section id="blog-info"></section>
+    <HeaderDivider />
+    <section id="blog-info" class="bg-white pt-10">
+      <ArticleContainer />
+    </section>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import RegularPageHeader from "@/components/RegularPageHeader.vue";
+import HeaderDivider from "@/components/HeaderDivider.vue";
+import ArticleContainer from "@/components/ArticleContainer.vue";
 
 export default defineComponent({
   name: "Blog",
   components: {
     RegularPageHeader,
+    HeaderDivider,
+    ArticleContainer,
   },
   data() {
     return {

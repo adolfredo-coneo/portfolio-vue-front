@@ -3,7 +3,8 @@
     <section id="project-header">
       <RegularPageHeader :title="title" :description="description" />
     </section>
-    <section id="projects">
+    <HeaderDivider />
+    <section class="bg-white pt-10" id="projects">
       <ProjectContainer />
     </section>
   </div>
@@ -12,6 +13,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import ProjectContainer from "@/components/ProjectContainer.vue"; // @ is an alias to /src
+import HeaderDivider from "@/components/HeaderDivider.vue";
 import RegularPageHeader from "@/components/RegularPageHeader.vue";
 
 export default defineComponent({
@@ -19,6 +21,7 @@ export default defineComponent({
   components: {
     ProjectContainer,
     RegularPageHeader,
+    HeaderDivider,
   },
   data() {
     return {

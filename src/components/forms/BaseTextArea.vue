@@ -2,7 +2,7 @@
   <label
     v-if="label"
     :for="id"
-    class="block text-2xl font-medium text-black text-left"
+    class="block text-2xl font-medium text-white text-left"
   >
     {{ label }}
   </label>

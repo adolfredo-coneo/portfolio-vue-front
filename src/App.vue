@@ -4,7 +4,7 @@
   </header>
   <main>
     <h1 class="pt-24"></h1>
-    <div class="px-6">
+    <div class="">
       <router-view />
     </div>
   </main>

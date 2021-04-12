@@ -3,7 +3,8 @@
     <section id="contact-header">
       <RegularPageHeader :title="title" :description="description" />
     </section>
-    <section id="contact-form">
+    <HeaderDivider />
+    <section id="contact-form" class="bg-white pt-10">
       <ContactForm />
     </section>
   </div>
@@ -12,12 +13,14 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import RegularPageHeader from "@/components/RegularPageHeader.vue";
+import HeaderDivider from "@/components/HeaderDivider.vue";
 import ContactForm from "@/views/ContactForm.vue";
 
 export default defineComponent({
   name: "Contact",
   components: {
     RegularPageHeader,
+    HeaderDivider,
     ContactForm,
   },
   data() {

@@ -1,21 +1,19 @@
 <template>
   <nav
     :class="{ scrolled: !view.atTopOfPage }"
-    class="fixed w-full pt-6 m-auto top-0 animate"
+    class="fixed w-full pt-6 m-auto top-0 animate text-white"
   >
-    <div
-      className="max-w-7xl flex justify-between items-center mx-auto px-6 xl:border-b-2 xl:border-blue-400"
-    >
+    <div className="max-w-7xl flex justify-between items-center mx-auto px-6">
       <div
         class="flex items-center justify-center h-12 font-black text-2xl sm:text-3xl"
       >
         <router-link :to="{ name: 'Home' }">
           <span class="text-yellow-400">{&nbsp;</span>
-          <span class="text-red-500">adolConeo</span>
+          <span class="">adolConeo</span>
           <span class="text-yellow-400">&nbsp;}</span>
         </router-link>
       </div>
-      <div class="hidden md:flex text-red-500 gap-6 text-xl font-semibold">
+      <div class="hidden md:flex gap-6 text-xl font-semibold">
         <router-link :to="{ name: 'Home' }">Home</router-link>
         <router-link :to="{ name: 'About' }">About</router-link>
         <router-link :to="{ name: 'Projects' }">Projects</router-link>
@@ -107,6 +105,7 @@
     <div
       className="max-w-7xl flex justify-between items-center mx-4 xl:hidden px-4 sm:px-8 border-b-2 border-blue-400"
     ></div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0 mt-2" />
   </nav>
 </template>
 
@@ -164,8 +163,9 @@ nav {
 nav.scrolled {
   @apply shadow-2xl;
   border-bottom: 0px;
-  @apply bg-black;
+  @apply bg-white;
   @apply bg-opacity-90;
+  @apply text-black;
 }
 
 .classMovilMenu {

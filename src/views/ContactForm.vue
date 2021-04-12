@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-7xl mx-auto mb-20 flex flex-col">
-    <div class="w-full border-b-2 border-blue-200 text-left mb-10 shadow-lg">
-      <h1 class="mb-2 text-2xl">CONTACT FORM</h1>
+  <div class="max-w-7xl mx-auto pb-20 flex flex-col">
+    <div class="w-full border-b-2 border-blue-200 text-left mb-10">
+      <h1 class="mb-2 text-2xl text-white font-semibold">CONTACT FORM</h1>
     </div>
     <form @submit.prevent="sendForm">
       <div class="max-w-5xl mx-auto shadow overflow-hidden sm:rounded-md">
-        <div class="px-4 py-5 bg-white sm:p-6">
+        <div class="px-4 py-5 bg-black sm:p-6">
           <div class="grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
               <BaseInput
