@@ -8,7 +8,7 @@
       <ProjectContainer />
     </section>
     <section class="bg-white pt-10" id="articles">
-      <ArticleContainer limit="2" />
+      <ArticleContainer v-bind:limit="2" />
     </section>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl mx-auto flex flex-col">
+  <div class="max-w-7xl mx-auto flex flex-col px-6">
     <div class="w-full border-b-2 border-blue-200 text-left mb-10">
       <h1 class="mb-2 text-2xl text-black font-semibold">LATEST ARTICLES</h1>
     </div>

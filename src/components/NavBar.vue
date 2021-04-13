@@ -71,34 +71,30 @@
     >
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a
-          href="#"
+        <router-link
           class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Dashboard</a
+          :to="{ name: 'Home' }"
+          >Home</router-link
         >
-
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Team</a
+        <router-link
+          class="text-black hover:bg-gray-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          :to="{ name: 'About' }"
+          >About</router-link
         >
-
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Projects</a
+        <router-link
+          class="text-black hover:bg-gray-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          :to="{ name: 'Projects' }"
+          >Projects</router-link
         >
-
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Calendar</a
+        <router-link
+          class="text-black hover:bg-gray-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          :to="{ name: 'Blog' }"
+          >Blog</router-link
         >
-
-        <a
-          href="#"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Reports</a
+        <router-link
+          class="text-black hover:bg-gray-900 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          :to="{ name: 'Contact' }"
+          >Contact</router-link
         >
       </div>
     </div>

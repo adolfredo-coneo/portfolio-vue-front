@@ -35,7 +35,9 @@
     </g>
   </svg>
   <div class="py-10">
-    <div class="max-w-7xl mx-auto mb-10 flex flex-col sm:flex-row items-center">
+    <div
+      class="max-w-7xl mx-auto mb-10 flex flex-col sm:flex-row items-center px-6"
+    >
       <div class="w-2/2 md:w-1/2 text-left order-last md:order-first">
         <h1 class="text-4xl mb-10">Get in Touch</h1>
         <h2 class="text-2xl mb-10 w-11/12">Let's talk about something.</h2>
@@ -65,7 +67,7 @@
             </svg>
           </div>
           <div>
-            <a href="mailto:ado.coneo@gmail.com" class="text-xl"
+            <a href="mailto:ado.coneo@gmail.com" class="text-lg sm:text-xl"
               >ado.coneo@gmail.com</a
             >
           </div>
