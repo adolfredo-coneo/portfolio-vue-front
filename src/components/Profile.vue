@@ -20,7 +20,7 @@
         </p>
         <p class="mb-6">
           I've been working on a project called Reado Kids, which aims to help
-          children in their path to learning how to read.
+          children in their path to learning how to read and become readers.
         </p>
       </div>
       <div class="w-full sm:w-1/2 flex justify-center items-center">
