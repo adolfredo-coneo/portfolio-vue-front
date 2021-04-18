@@ -26,7 +26,7 @@ export default defineComponent({
   data() {
     return {
       title: "Blogging",
-      description: "These are some of the articles I've written recently.",
+      description: "These are some of the articles I've written recently.",
     };
   },
 });
