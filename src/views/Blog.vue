@@ -29,5 +29,8 @@ export default defineComponent({
       description: "These are some of the articles I've written recently.",
     };
   },
+  mounted: function () {
+    window.scrollTo(0, 0);
+  },
 });
 </script>

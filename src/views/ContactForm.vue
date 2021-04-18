@@ -1,12 +1,12 @@
 <template>
-  <div class="max-w-7xl mx-auto pb-20 flex flex-col">
+  <div class="max-w-7xl mx-auto pb-20 flex flex-col px-6">
     <div class="w-full border-b-2 border-blue-200 text-left mb-10">
-      <h1 class="mb-2 text-2xl text-white font-semibold">CONTACT FORM</h1>
+      <h1 class="mb-2 text-2xl text-black font-semibold">CONTACT FORM</h1>
     </div>
     <form @submit.prevent="sendForm">
       <div class="max-w-5xl mx-auto shadow overflow-hidden sm:rounded-md">
         <div class="px-4 py-5 bg-black sm:p-6">
-          <div class="grid grid-cols-6 gap-6">
+          <div class="grid grid-cols-6 gap-6" v-if="!showMessage">
             <div class="col-span-6 sm:col-span-3">
               <BaseInput
                 v-model="contact.name"
@@ -54,11 +54,14 @@
             <div class="col-span-6">
               <button
                 type="submit"
-                class="inline-flex justify-center py-2 px-10 border border-transparent shadow-sm text-2xl sm:text-xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                class="inline-flex justify-center py-2 px-10 border border-transparent shadow-sm text-xl sm:text-2xl font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Send Message
               </button>
             </div>
+          </div>
+          <div class="text-xl sm:text-2xl" v-if="showMessage">
+            <p>{{ messageResponse }}</p>
           </div>
         </div>
       </div>
@@ -91,6 +94,9 @@ export default defineComponent({
         message: "",
         company: "",
       },
+      messageResponse:
+        "Thank you for contacting me. I'll get back to you as soon as possible.",
+      showMessage: false,
     };
   },
   methods: {
@@ -98,6 +104,7 @@ export default defineComponent({
       ProjectService.sendContact(this.contact)
         .then((response: AxiosResponse) => {
           console.log("Response", response);
+          this.showMessage = true;
         })
         .catch((error: void) => {
           console.log("Error", error);

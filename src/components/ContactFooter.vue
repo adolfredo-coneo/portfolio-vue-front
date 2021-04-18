@@ -38,17 +38,19 @@
     <div
       class="max-w-7xl mx-auto mb-10 flex flex-col sm:flex-row items-center px-6"
     >
-      <div class="w-2/2 md:w-1/2 text-left order-last md:order-first">
+      <div
+        class="w-2/2 md:w-1/2 text-center mb-6 md:mb-0 md:text-left order-first"
+      >
         <h1 class="text-4xl mb-10">Get in Touch</h1>
         <h2 class="text-2xl mb-10 w-11/12">Let's talk about something.</h2>
         <div
-          class="text-2xl w-6/12 font-bold rounded-xl bg-blue-400 text-white py-3 text-center cursor-pointer"
+          class="text-2xl w-12/12 md:w-6/12 font-bold rounded-xl bg-blue-400 text-white py-3 text-center cursor-pointer"
         >
           <router-link to="/contact">Contact Me</router-link>
         </div>
       </div>
       <div
-        class="w-2/2 md:w-1/2 mb-4 pl-10 md:mb-0 justify-center grid grid-cols-2 gap-y-6"
+        class="w-2/2 md:w-1/2 mb-4 pl-0 md:pl-10 md:mb-0 justify-center grid grid-cols-1 md:grid-cols-2 gap-y-6"
       >
         <div class="flex justify-start items-center gap-6">
           <div>

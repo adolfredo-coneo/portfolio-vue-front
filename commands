@@ -23,6 +23,10 @@ yarn add tailwindcss@npm:@tailwindcss/postcss7-compat
 //Axios
 yarn add axios
 
+//Nodemailer
+yarn add nodemailer
+yarn add -D @types/nodemailer
+
 
 **************GIT************************
 git init

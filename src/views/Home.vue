@@ -31,5 +31,8 @@ export default defineComponent({
   data() {
     return {};
   },
+  mounted: function () {
+    window.scrollTo(0, 0);
+  },
 });
 </script>

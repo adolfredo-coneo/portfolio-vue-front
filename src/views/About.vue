@@ -27,5 +27,8 @@ export default defineComponent({
       description: "This is just who I am",
     };
   },
+  mounted: function () {
+    window.scrollTo(0, 0);
+  },
 });
 </script>

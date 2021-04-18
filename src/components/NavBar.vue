@@ -69,7 +69,7 @@
       class="md:hidden"
       id="mobile-menu"
     >
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3" @click="hideMenu">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <router-link
           class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -106,6 +106,7 @@
 </template>
 
 <script lang="ts">
+//import store from "@/store";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -124,6 +125,11 @@ export default defineComponent({
   // a beforeMount call to add a listener to the window
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
+  },
+  mounted() {
+    //this.movilMenuOpen = false;
+    //store.commit("showMenu");
+    //console.log(store.state.menuShow);
   },
   methods: {
     // the function to call when the user scrolls, added as a method
@@ -146,6 +152,10 @@ export default defineComponent({
         this.movilMenuOpen = false;
         this.view.atTopOfPage = true;
       }
+    },
+    hideMenu() {
+      this.movilMenuOpen = false;
+      window.scrollTo(0, 0);
     },
   },
 });

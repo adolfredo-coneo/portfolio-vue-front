@@ -17,11 +17,7 @@
     </div>
     <div class="w-6/6 md:w-1/2 mb-4 md:mb-0 flex justify-center">
       <!--<img alt="Vue logo" src="../assets/logo.png" />-->
-      <img
-        class="rounded-full"
-        alt="Main Photo"
-        src="https://www.sliderrevolution.com/wp-content/uploads/revslider/woocommerce-carousel-one-static/woo_product1.jpg"
-      />
+      <img class="rounded-full" alt="Main Photo" src="assets/adol_1.png" />
     </div>
   </div>
 </template>

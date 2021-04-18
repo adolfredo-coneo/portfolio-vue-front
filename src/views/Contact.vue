@@ -30,5 +30,8 @@ export default defineComponent({
         "Don't hesitate to contact me if you have any questions or project ideas. I'll get back to you as soon as possible.",
     };
   },
+  mounted: function () {
+    window.scrollTo(0, 0);
+  },
 });
 </script>

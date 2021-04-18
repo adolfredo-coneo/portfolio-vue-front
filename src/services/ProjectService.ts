@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+//import { sendEmail } from "@/services/sendEmail";
 
 const apiClient = axios.create({
   baseURL:
@@ -26,6 +27,15 @@ export default {
     return apiClient.get("/projects/" + id);
   },
   sendContact(contact: ContactInput): Promise<AxiosResponse> {
+    /*sendEmail(
+      contact.name,
+      contact.email,
+      "Portfolio Contact",
+      contact.messageType,
+      contact.company,
+      "ado.coneo@gmail.com",
+      contact.message
+    );*/
     return apiClient.post("/contacts/", contact);
   },
   getArticles(): Promise<AxiosResponse> {

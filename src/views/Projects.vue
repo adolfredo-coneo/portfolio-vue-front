@@ -30,5 +30,8 @@ export default defineComponent({
         "These are some of the recent Front-End and Back-End projects I've been working lately.",
     };
   },
+  mounted: function () {
+    window.scrollTo(0, 0);
+  },
 });
 </script>
