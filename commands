@@ -26,6 +26,7 @@ yarn add axios
 //Nodemailer
 yarn add nodemailer
 yarn add -D @types/nodemailer
+yarn add @aws-sdk/client-ses
 
 
 **************GIT************************

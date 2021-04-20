@@ -1,5 +1,7 @@
 "use strict";
 import nodemailer from "nodemailer";
+import aws from "@aws-sdk/client-ses";
+//let aws = require("@aws-sdk/client-ses");
 
 // async..await is not allowed in global scope, must use a wrapper
 export async function sendEmail(
@@ -11,35 +13,28 @@ export async function sendEmail(
   to: string,
   text: string
 ) {
-  // Generate test SMTP service account from ethereal.email
-  // Only needed if you don't have a real mail account for testing
-  let testAccount = await nodemailer.createTestAccount();
-  console.log("testAccount:", testAccount);
+  const ses = new aws.SES({
+    apiVersion: "2010-12-01",
+    region: "us-east-2",
+  });
 
-  // create reusable transporter object using the default SMTP transport
+  // create reusable transporter object using the SES transport
   let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
+    SES: { ses, aws },
+  });
+
+  // send some mail
+  transporter.sendMail(
+    {
+      from: name + " " + email, // sender address
+      to, // list of receivers
+      subject, // Subject line
+      text, // plain text body
+      html: `<b>${name}</b>-<b>${email}</b><br><b>${messageType}</b><br><b>${company}</b><br><b>${text}</b><br>`, // html body
     },
-  });
-
-  // send mail with defined transport object
-  let info = await transporter.sendMail({
-    from: name + " " + email, // sender address
-    to, // list of receivers
-    subject, // Subject line
-    text, // plain text body
-    html: `<b>${name}</b>-<b>${email}</b><br><b>${messageType}</b><br><b>${company}</b><br><b>${text}</b><br>`, // html body
-  });
-
-  console.log("Message sent: %s", info.messageId);
-  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-  // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+    (err, info) => {
+      console.log(info.envelope);
+      console.log(info.messageId);
+    }
+  );
 }
