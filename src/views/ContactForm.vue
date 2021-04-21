@@ -3,18 +3,11 @@
     <div class="w-full border-b-2 border-blue-200 text-left mb-10">
       <h1 class="mb-2 text-2xl text-black font-semibold">CONTACT FORM</h1>
     </div>
-    <form
-      name="portfolio-contact"
-      method="post"
-      @submit.prevent="sendForm"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
+    <form name="portfolio-contact" @submit.prevent="sendForm">
       <div class="max-w-5xl mx-auto shadow overflow-hidden sm:rounded-md">
         <div class="px-4 py-5 bg-black sm:p-6">
           <div class="grid grid-cols-6 gap-6" v-if="!showMessage">
             <div class="col-span-6 sm:col-span-3">
-              <input type="hidden" name="form-name" value="portfolio-contact" />
               <BaseInput
                 v-model="contact.name"
                 label="Name"

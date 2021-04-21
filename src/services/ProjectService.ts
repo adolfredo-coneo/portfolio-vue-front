@@ -36,7 +36,15 @@ export default {
       "ado.coneo@gmail.com",
       contact.message
     );*/
-    return apiClient.post("/contacts/", contact);
+    const axiosConfig = {
+      header: { "Content-Type": "application/x-www-form-urlencoded" },
+    };
+
+    return axios.post("/", {
+      "form-name": "ask-question",
+      ...contact,
+      axiosConfig,
+    });
   },
   getArticles(): Promise<AxiosResponse> {
     return apiClient.get("/articles");
