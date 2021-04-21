@@ -3,7 +3,7 @@
     <div class="w-full border-b-2 border-blue-200 text-left mb-10">
       <h1 class="mb-2 text-2xl text-black font-semibold">CONTACT FORM</h1>
     </div>
-    <form name="portfolio-contact" @submit.prevent="sendForm">
+    <form name="portfolio-contact" @submit.prevent="sendEmail">
       <div class="max-w-5xl mx-auto shadow overflow-hidden sm:rounded-md">
         <div class="px-4 py-5 bg-black sm:p-6">
           <div class="grid grid-cols-6 gap-6" v-if="!showMessage">
@@ -74,8 +74,7 @@ import { defineComponent } from "vue";
 import BaseInput from "@/components/forms/BaseInput.vue";
 import BaseSelect from "@/components/forms/BaseSelect.vue";
 import BaseTextArea from "@/components/forms/BaseTextArea.vue";
-import ProjectService from "@/services/ProjectService";
-import { AxiosResponse } from "node_modules/axios";
+import emailjs from "emailjs-com";
 
 export default defineComponent({
   name: "ContactForm",
@@ -100,15 +99,23 @@ export default defineComponent({
     };
   },
   methods: {
-    sendForm() {
-      ProjectService.sendContact(this.contact)
-        .then((response: AxiosResponse) => {
-          console.log("Response", response);
-          this.showMessage = true;
-        })
-        .catch((error: void) => {
-          console.log("Error", error);
-        });
+    sendEmail(e: HTMLFormElement) {
+      emailjs
+        .sendForm(
+          "service_zh5kt4k",
+          "template_voy0rlr",
+          e.target,
+          "user_fKgKvLwDwAqtmLJPlhteS"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.status, result.text);
+            this.showMessage = true;
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
     },
   },
 });

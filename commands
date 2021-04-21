@@ -23,11 +23,17 @@ yarn add tailwindcss@npm:@tailwindcss/postcss7-compat
 //Axios
 yarn add axios
 
-//Nodemailer
-yarn add nodemailer
-yarn add -D @types/nodemailer
-yarn add @aws-sdk/client-ses
+//emailjs
+yarn add emailjs-com
 
+yarn add nodemailer
+yarn remove nodemailer
+
+yarn add -D @types/nodemailer
+yarn remove @types/nodemailer
+
+yarn add @aws-sdk/client-ses
+yarn remove @aws-sdk/client-ses
 
 **************GIT************************
 git init
