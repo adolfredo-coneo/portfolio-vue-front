@@ -82,7 +82,7 @@
         }
       ],
       "hosted": "Heroku",
-      "link": "",
+      "link": false,
       "image": "assets/reado_backend.png",
       "status": true
     },

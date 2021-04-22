@@ -62,20 +62,21 @@
                 </dd>
               </div>
             </dl>
-            <div class="grid grid-cols-2 gap-4 px-4 sm:px-6 py-4">
+            <div class="grid grid-cols-1 gap-4 px-4 sm:px-6 py-4">
               <div
                 class="text-base sm:text-xl font-bold rounded-lg bg-blue-500 text-black py-2 text-center cursor-pointer"
+                v-show="project.link"
               >
                 <a :href="project.link" target="_blank">Visit Website</a>
               </div>
-              <div
+              <!--<div
                 class="text-base sm:text-xl font-bold rounded-lg bg-gray-400 text-black py-2 text-center cursor-pointer"
               >
                 <router-link
                   :to="{ name: 'ProjectDetails', params: { id: project.id } }"
                   >View Details</router-link
                 >
-              </div>
+              </div>-->
             </div>
           </article>
         </div>
@@ -108,7 +109,7 @@
                 <h3
                   class="border border-transparent py-2 px-4 font-medium bg-white bg-opacity-10"
                 >
-                  reado-kids.png
+                  project.png
                 </h3>
               </div>
               <div class="flex-none">

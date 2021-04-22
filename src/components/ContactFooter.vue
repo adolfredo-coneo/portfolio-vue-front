@@ -97,7 +97,7 @@
               href="https://www.linkedin.com/in/adolfredoconeo/?locale=en_US"
               target="_blank"
               class="text-xl"
-              >Linkedin</a
+              >LinkedIn</a
             >
           </div>
         </div>
