@@ -24,7 +24,7 @@
         <!-- Mobile menu button -->
         <button
           type="button"
-          class="inline-flex items-center justify-center p-2 rounded-md text-black font-black hover:text-white hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+          class="inline-flex items-center justify-center p-2 rounded-md text-white font-black hover:text-white bg-black hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
           aria-controls="mobile-menu"
           aria-expanded="false"
           @click="handleClickMenu"
